@@ -21,6 +21,9 @@ r = praw.Reddit(client_id= "XXXXX",
 print(r.user.me())
 
 #exploring subreddit
+#creating a list with the main topics
+
+#creating a dictionary
   
 topics_dict = { "title":[],
                 "score":[],
@@ -30,6 +33,8 @@ topics_dict = { "title":[],
                 "created": [],
                 "body":[],
                 "author": []} 
+
+#pulling the features together
 
 for submission in r.subreddit('politics').top('month',limit=100):
     topics_dict["title"].append(submission.title)
@@ -41,7 +46,11 @@ for submission in r.subreddit('politics').top('month',limit=100):
     topics_dict["body"].append(submission.selftext)  
     topics_dict["author"].append(submission.author.name)
 
+#the subreddit data
 topics_data = pd.DataFrame(topics_dict)
 
 print(topics_data)
+
+#Authors of the top 100
+topics_data.author.value_counts()
 

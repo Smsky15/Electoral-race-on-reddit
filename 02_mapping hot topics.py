@@ -11,7 +11,7 @@ import pandas as pd
 import re
 
 
-df = pd.read_csv("Top 100 Anarchism.csv")
+df = pd.read_csv("megadata_csv.csv")
 print(df)
 
 df.head()

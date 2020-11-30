@@ -44,12 +44,16 @@ def plot_10_most_common_words(count_data, count_vectorizer):
     plt.xlabel('words')
     plt.ylabel('counts')
     plt.show()
-    
-# Initialise the count vectorizer with the English stop words
-count_vectorizer = CountVectorizer(stop_words='english')
+
+#(manipulate) stop words 
+stop = list(stopwords.words('english'))
+stop.extend('word1 word2 word3'.split())  
+
+# Initialise the count vectorizer with the stop words
+count_vectorizer = CountVectorizer(analyzer = 'word',stop_words=set(stop))
 
 # Fit and transform the processed titles
-count_data = count_vectorizer.fit_transform(df['title'])
+count_data = count_vectorizer.fit_transform(df['title']) #possibility to add ;df["body"]
 
 # Visualise the 10 most common words
 plot_10_most_common_words(count_data, count_vectorizer)

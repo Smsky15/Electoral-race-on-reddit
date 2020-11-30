@@ -87,5 +87,17 @@ upvotedf = pd.DataFrame(upvoteratio, columns = ['Subreddit','Average upvote rati
 
 upvotedf.to_csv( "upvotedf.csv", index=False, encoding='utf-8-sig')
 
-#Next step : Plotting these values in a line plot. Problem I have :
-#When I plot them, half the values on the X axis are skipped, just not shown.
+
+ax = plt.gca()
+
+upvotedf.plot(kind='line',x='Subreddit',y='Average upvote ratio',ax=ax)
+upvotedf.plot(kind='line',x='Subreddit',y='Most controversial submission', color='red', ax=ax)
+plt.ylabel('Upvote ratio')
+plt.xlabel('Subreddit')
+plt.xticks(range(0,len(upvotedf.index)), upvotedf['Subreddit'], rotation=60)
+fig = plt.gcf()
+fig.set_size_inches(10, 7, forward=True)
+plt.tight_layout()
+plt.savefig('fig1.png', dpi = 100)
+plt.show()
+

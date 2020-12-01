@@ -46,6 +46,7 @@ def plot_10_most_common_words(count_data, count_vectorizer):
     plt.show()
 
 #(manipulate) stop words 
+from nltk.corpus import stopwords
 stop = list(stopwords.words('english'))
 stop.extend('word1 word2 word3'.split())  
 

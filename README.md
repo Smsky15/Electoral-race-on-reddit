@@ -13,8 +13,7 @@ This will require us to make a heatmap of keywords used in each subreddit.
 <b>- What are the most controversial topics within each community? </b> 
 This will require us to define controversial, perhaps in terms of the ratio of positive to negative comments to a post. Defining this will require us to look into keywords in each comment to label them as positive or negative.
 
-<b>- How does sentiment differ towards hot topics which transcend subreddits? </b> 
-This will require us to use the answer to the first question to identify overlapping hot topics, and then do a sentiment analysis of the comments on each related topics.
+<b>- How does sentiment differ towards hot topics across subreddits? </b> 
+This will require us to identify hot topics, and then do a sentiment analysis of the comments on each related topics.
 
-<b>- Have there been topics which “bled” from one community into another? </b> 
-We will have to make timelines of hot topics which became popular across subreddits, to see if some became popular in one subreddit and then, consequently, rose in another. 
+

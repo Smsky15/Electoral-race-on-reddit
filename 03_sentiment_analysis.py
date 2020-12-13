@@ -14,11 +14,11 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 # create object for VADER sentiment function interaction
 sia = SentimentIntensityAnalyzer()
 
-r = praw.Reddit(client_id= "94J5DUz2HFhkCw",
-                client_secret= "fcdwbW815czCBnyQYxOMPFOTcDqYew",
-                user_agent= "u/smsky15",
-                username= "smsky15",
-                password= "Zef21286637?")
+r = praw.Reddit(client_id= "XXXXX",
+                client_secret= "XXXXX",
+                user_agent= "XXXXX",
+                username= "XXXXX",
+                password= "XXXXX")
                 
 print(r.user.me())
 
